@@ -15,14 +15,14 @@ Purpose: The e-timesheet allows the employees to capture their working hours and
 -	Automate the approval workflow online.
 
 ***Databases***
-----------------------------------
+****************************
 Database #1: emp_datadetails
 Content: store employees personal data and leave entitlement
 ==database dictionary==
 EmpID = employee id; FirstName = employee first name; LastName = employee last name; DOB = date of birth
 PayGrade = employee current pay grade; EmpDate = employee joined date (date of employment)
 ComEmail = employee company email; Mobileph = employee mobile number
-----------------------------------
+****************************
 Database #2: emp_leaves
 Content: store employee leave application
 ==database dictionary==
@@ -31,7 +31,7 @@ Starts = the start date of the leave; Ends = the end date of the leave
 Total = number of leave (in days) applied per line
 Information = additional info that the employee would want to indicate in his leave application
 AppStatus = approval status of the leave applicate per line
-----------------------------------
+****************************
 Database #3: emp_timesheet
 Content: store employee timesheet record per week
 EmpID = employee id; TSHID = timessheet id generate per active employee per week
