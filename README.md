@@ -3,7 +3,7 @@ Content: e-Timesheet web application
 Purpose: The e-timesheet allows the employees to capture their working hours and leave applications digitally.
 
 ***Features to be implemented on application***
-- Login page for users to log in. [compoleted: launch.jsp]
+- Login page for users to log in. [completed: launch.jsp],[link: http://localhost:8090/Project/userservlets/dashboard]
 -	Allow designated users to add / delete / modify employee records [Completed: register.jsp, useredit.jsp]
 -	Allow designated users to view all employees record [completed: usermanagement.jsp]
 -	Allow designated and payroll department to view timesheet report for all employees.
