@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this web application, please cite it as below."
+description: "This is a web application for employees to submit their timesheet online"
+authors:
+- family-names: "SEN"
+  given-names: "SZE_HUI"
+title: "CDV1C02-PROJECT-SSH"
+version: 1.0.0
+doi: 10.5281/zenodo.1234
+date-released: 2025-01-16
+url: "https://github.com/PrincessDem9n/CDV1C02-PROJECT-SSH"
