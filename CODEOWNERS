@@ -6,13 +6,16 @@
 
 #.xml files
 #user PrincessDem9n owns all the .xml files
-*.xml @PrincessDem9n
+*.xml
 
 #.java files
-#user PrincessDem9n owns all the .jsp files
-*.java @PrincessDem9n
+#user PrincessDem9n owns all the .java files
+*.java
 
 #.class files
-#user PrincessDem9n owns all the .jsp files
-*.class @PrincessDem9n
+#user PrincessDem9n owns all the .class files
+*.class
 
+#.jsp files
+#user PrincessDem9n owns all the .jsp files
+*.jsp
