@@ -1,12 +1,15 @@
 School Project - Code Management
-Content: e-Timesheet web application
-Purpose: The e-timesheet allows the employees to capture their working hours and leave applications digitally.
+Content: e-Timesheet web application.
 
-***Features to be implemented on application***
-- Login page for users to log in. [completed: launch.jsp],[link: http://localhost:8090/Project/userservlets/dashboard]
+Purpose: 
+The e-timesheet allows the employees to capture their working hours and leave applications digitally.
+The web application is able to perform auto-tabulation and validation of the entry and automated the approval process.
+
+***Features of the web application***
+- Login page for users to log in. [completed: launch.jsp]
 -	Allow designated users to add / delete / modify employee records [Completed: register.jsp, useredit.jsp]
 -	Allow designated users to view all employees record [completed: usermanagement.jsp]
--	Allow designated and payroll department to view timesheet report for all employees.
+-	Allow designated administrator and payroll department to view timesheet report for all employees.
 -	Allow employee to View/Edit employee’s personal data
 -	Allow employee to update his/her working hours.
 -	Allow employee to view his/her past records (timesheet)
