@@ -1,5 +1,7 @@
 /bin/
 *.class
 *.classpath
-*.txt
+*.project
+*.settings
+*.metadata
 /target/
