@@ -46,6 +46,7 @@ There are 3 databases that is linked to the project
 ### ----------------------------
     Database #3: emp_timesheet
     Content: store employee timesheet record per week
+    ==database dictionary==
     EmpID = employee id; TSHID = timessheet id generate per active employee per week
     WeekNYear = week per calendar year; DateRange = dates of the week per calendar year
     Monday = monday of the week; Tuesday = tuesday of the week; Wednesday = wednesday of the week
@@ -57,6 +58,6 @@ There are 3 databases that is linked to the project
 ## Contributors
 6562515M@polite.edu.sg
 
-# Contact
+## Contact
 this is the contact information for the code owners
 
