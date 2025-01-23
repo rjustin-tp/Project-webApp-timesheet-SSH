@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>MM Timesheet App</title>
-</head>
+<title>Mott MacDonald Timesheet App</title>
+</head> 
 <body>
 
-<h2>Welcome to MM Timesheet Platform</h2><br>
+<h2>Welcome to Mott MacDonald Timesheet Platform</h2><br>
 <h2> Please login to begin</h2>
 	
 	<form action="loginservlets" method="post">

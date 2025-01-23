@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>MM Timesheet App</title>
+<title>Mott MacDonald Timesheet App</title>
 </head>
 <body>
-<h3>MM Timesheet Platform</h3>
+<h3>Mott MacDonald Timesheet Platform</h3>
 <h3>Please entered all info for the new employee</h3><br>
 
 	<form action="registerservlets" method="Post"> 

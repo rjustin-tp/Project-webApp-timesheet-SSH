@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>MacDonald P/L APP</title>
+<title>Mott MacDonald P/L APP</title>
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <title>Employee Management Application</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
@@ -14,7 +14,7 @@
 <body>
 		<nav class="navbar navbar-expand-md navbar-light">
 		<div>
-			<a class="navbar-brand"> MacDonald P/L Timesheet </a><br>
+			<a class="navbar-brand"> Mott MacDonald P/L Timesheet </a><br>
 			<a class="navbar-brand"> Employee Management Application </a>
 		</div>
 		<ul class="navbar-nav">
