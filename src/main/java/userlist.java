@@ -1,3 +1,5 @@
+package src.main.java;
+
 public class userlist {
 //declare attributes
 	protected String empID;
