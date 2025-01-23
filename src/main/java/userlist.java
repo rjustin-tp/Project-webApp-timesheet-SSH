@@ -1,4 +1,3 @@
-
 public class userlist {
 //declare attributes
 	protected String empID;
