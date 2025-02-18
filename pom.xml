@@ -64,14 +64,6 @@
 		<artifactId>jstl</artifactId> 
 		<version>1.2</version>
 	</dependency>
-	<!-- adding JUnit dependencies-->
-	<dependency>
-		<groupId>${junit-jupiter.groupId}</groupId>
-		<artifactId>${junit-jupiter.artifactId}</artifactId>
-		<version>${junit-jupiter.version}</version>
-		<scope>test</scope>
-	</dependency>
-
 	<!-- adding Selenium dependencies-->
 	<dependency>
 		<groupId>${selenium.groupId}</groupId>
@@ -84,6 +76,14 @@
 		<version>${testng.version}</version>
 		<scope>test</scope>
 	</dependency>
+		<!-- adding JUnit dependencies-->
+	<dependency>
+		<groupId>${junit-jupiter.groupId}</groupId>
+		<artifactId>${junit-jupiter.artifactId}</artifactId>
+		<version>${junit-jupiter.version}</version>
+		<scope>test</scope>
+	</dependency>
+
  </dependencies>
 
   <build>
