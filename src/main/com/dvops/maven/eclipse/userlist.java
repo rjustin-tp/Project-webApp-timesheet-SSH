@@ -1,3 +1,5 @@
+package com.dvops.maven.eclipse;
+
 public class userlist {
 //declare attributes
 	protected String empID;
