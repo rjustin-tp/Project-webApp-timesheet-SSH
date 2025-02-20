@@ -13,14 +13,6 @@
 		<junit-jupiter.artifactId>junit-jupiter</junit-jupiter.artifactId>
 		<junit-jupiter.version>5.11.4</junit-jupiter.version>
 
-   		<!-- adding Selenium-->
-  		<selenium.groupId>org.seleniumhq.selenium</selenium.groupId>
-		<selenium.artifactId>selenium-java</selenium.artifactId>
-		<selenium.version>4.27.0</selenium.version>
-		<testng.groupId>org.testng</testng.groupId>
-		<testng.artifactId>testng</testng.artifactId>
-		<testng.version>7.10.2</testng.version>
-		
 		<!--  jacoco properties -->
 		<jacoco.groupId>org.jacoco</jacoco.groupId>
 		<jacoco.artifactId>jacoco-maven-plugin</jacoco.artifactId>
@@ -64,24 +56,17 @@
 		<artifactId>jstl</artifactId> 
 		<version>1.2</version>
 	</dependency>
-	<!-- adding Selenium dependencies-->
-	<dependency>
-		<groupId>${selenium.groupId}</groupId>
-		<artifactId>${selenium.artifactId}</artifactId>
-		<version>${selenium.version}</version>
-	</dependency>
-	<dependency>
-		<groupId>${testng.groupId}</groupId>
-		<artifactId>${testng.artifactId}</artifactId>
-		<version>${testng.version}</version>
-		<scope>test</scope>
-	</dependency>
-		<!-- adding JUnit dependencies-->
+	<!-- adding JUnit dependencies-->
 	<dependency>
 		<groupId>${junit-jupiter.groupId}</groupId>
 		<artifactId>${junit-jupiter.artifactId}</artifactId>
 		<version>${junit-jupiter.version}</version>
 		<scope>test</scope>
+	</dependency>
+	<dependency>
+    	<groupId>org.apache.tomcat.embed</groupId>
+    	<artifactId>tomcat-embed-jasper</artifactId>
+    	<version>10.1.10</version>
 	</dependency>
 
  </dependencies>
