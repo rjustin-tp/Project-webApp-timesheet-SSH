@@ -216,18 +216,14 @@ public class userservlets extends HttpServlet {
 		throws SQLException, IOException { 
 //Step 1: Retrieve value from the request
 		String empID = request.getParameter("empID"); 
-		String firstName = request.getParameter("FirstName");
-		String lastName = request.getParameter("LastName");
-//Step 2A: Attempt connection with database and execute delete user SQL query
+		//Step 2A: Attempt connection with database and execute delete user SQL query
 		try (Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(DELETE_USERS_SQL);) {
 		statement.setString(1, empID);
 		int i = statement.executeUpdate();
-			
-		} 
-//Step 2B: display delete account
-		PrintWriter writer = response.getWriter();
-		writer.println("Deleted account " + empID + " " + firstName + lastName);
-		writer.close();
+			PrintWriter writer = response.getWriter();
+			writer.println("Deleted account " + empID);
+			writer.close();
+			} 
 //Step 3: redirect back to UserServlet dashboard (note: remember to change the url to your project name)
 		response.sendRedirect("http://localhost:8080/Project/userservlets/dashboard");
 		}
