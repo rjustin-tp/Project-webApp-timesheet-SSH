@@ -115,6 +115,8 @@
         	<artifactId>maven-war-plugin</artifactId>
         	<version>3.2.3</version>
         </plugin>
+        
+        
       <!-- Jacoco plugins-->
       <plugin>
 		<groupId>${jacoco.groupId}</groupId>
