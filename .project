@@ -34,4 +34,11 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>main</name>
+			<type>2</type>
+			<location>C:/Users/skeet/Desktop/School/Workspace/Project-webApp-timesheet-SSH/src/main</location>
+		</link>
+	</linkedResources>
 </projectDescription>
