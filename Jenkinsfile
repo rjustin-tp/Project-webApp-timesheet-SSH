@@ -26,8 +26,7 @@ pipeline{
 		stage("sonar") {
             steps {
                 script {
-					def scannerHome = tool 'sonarqube-scanner'
-                    // Prepare SonarQube environment
+					 // Prepare SonarQube environment
                     def sonarProperties = """
                         sonar.projectKey=Project-webApp-timesheet-SSH
                         sonar.projectName=Project-webApp-timesheet-SSH
@@ -48,9 +47,7 @@ pipeline{
 
                     // Run SonarQube scan using the properties file
                     withSonarQubeEnv('sonarqube_server') {
-                     /**1st method bat "mvn sonar:sonar"*/
-                    /**2nd method*/
-                    bat "${scannerHome}"/bin/sonar-scanner -Dproject.settings=sonar-project.properties
+                    	bat "mvn sonar:sonar"
                   }
                 }
             }
