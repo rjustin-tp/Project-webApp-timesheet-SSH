@@ -74,7 +74,7 @@ public class registerservlets extends HttpServlet {
 		ps.setString(12, k); 
 		/**Step 6: perform the query on the database using the prepared statement*/
 		int i = ps.executeUpdate(); 
-		/**Step 7: check if the query had been successfully execute, return “You are successfully registered” via the response,*/
+		/**Step 7: check if the query had been successfully execute, return You are successfully registered via the response,*/
 		if (i > 0){
 		PrintWriter writer = response.getWriter();
 		writer.println("<h2>" + "You have successfully add a new employee account!" + "</h2>");
