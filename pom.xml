@@ -4,8 +4,8 @@
   <artifactId>Project</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  <name>Project</name>
-  <description>Project</description>
+  <name>Project-webApp-timesheet-SSH</name>
+  <description>Project-webApp-timesheet-SSH</description>
   
   <properties>
   	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
