@@ -208,7 +208,7 @@ public class userservlets extends HttpServlet {
 	} 
  	
 //Step 3: redirect back to UserServlet (note: remember to change the url to your project name)
-		response.sendRedirect("http://localhost:8090/Project/userservlets/dashboard");
+		response.sendRedirect("http://localhost:8080/Project/userservlets/dashboard");
 	}
 	
 //METHOD 3 TO DELETE USER
@@ -229,7 +229,7 @@ public class userservlets extends HttpServlet {
 		writer.println("Deleted account " + empID + " " + firstName + lastName);
 		writer.close();
 //Step 3: redirect back to UserServlet dashboard (note: remember to change the url to your project name)
-		response.sendRedirect("http://localhost:8090/Project/userservlets/dashboard");
+		response.sendRedirect("http://localhost:8080/Project/userservlets/dashboard");
 		}
 	
 //Method 4: addNewUser (trigger registerservlets) //method to trigger RegisterServlet
