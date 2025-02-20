@@ -21,7 +21,7 @@ import javax.servlet.RequestDispatcher;
 @WebServlet("/userservlets")
 public class userservlets extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	//Step 1: Prepare list of variables used for database connections 
+	/**Step 1: Prepare list of variables used for database connections*/
 	private String jdbcURL = "jdbc:mysql://localhost:3306/projectpart2";
 	private String jdbcUsername = "root";
 	private String jdbcPassword = "password";
@@ -38,16 +38,14 @@ public class userservlets extends HttpServlet {
      */
     public userservlets() {
         super();
-        // TODO Auto-generated constructor stub
-    }
+        }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//Step 4: Depending on the request servlet path, determine the function to invoke using the follow switch statement.
+		/**Step 4: Depending on the request servlet path, determine the function to invoke using the follow switch statement.*/
 		String action = request.getServletPath();
 			try {
 			switch (action) {
@@ -82,10 +80,9 @@ public class userservlets extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
-	//Step 3: Implement the getConnection method which facilitates connection to the database via JDBC
+	/**Step 3: Implement the getConnection method which facilitates connection to the database via JDBC*/
 	protected Connection getConnection() {
 	Connection connection = null;
 		try {
@@ -99,17 +96,17 @@ public class userservlets extends HttpServlet {
 	return connection;
 	}
 	
-	//Step 5: listUsers function to connect to the database and retrieve all users records
+	/**Step 5: listUsers function to connect to the database and retrieve all users records*/
 	private void listUsers(HttpServletRequest request, HttpServletResponse response)
 	throws SQLException, IOException, ServletException
 		{
 	List <userlist> users = new ArrayList <>();
 		try (Connection connection = getConnection(); 
-// Step 5.1: Create a statement using connection object
+/**Step 5.1: Create a statement using connection object*/
 			PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS);) { 
-// Step 5.2: Execute the query or update query
+/** Step 5.2: Execute the query or update query*/
 			ResultSet rs = preparedStatement.executeQuery(); 
-// Step 5.3: Process the ResultSet object.
+/** Step 5.3: Process the ResultSet object.*/
 			while (rs.next()) {
 				String n = rs.getString("empID");
 				String f = rs.getString("firstName");
@@ -128,26 +125,26 @@ public class userservlets extends HttpServlet {
 		} catch (SQLException e) {
 	System.out.println(e.getMessage());
 	} 
-// Step 5.4: Set the users list into the listUsers attribute to be pass to the userManagement.jsp
+/** Step 5.4: Set the users list into the listUsers attribute to be pass to the userManagement.jsp*/
 	request.setAttribute("listUsers", users);
 	request.getRequestDispatcher("/usermanagements.jsp").forward(request, response);
 	}
 	
-//METHOD 1 TO SHOWEDIT FORM
-//method to get parameter, query database for existing user data and redirect to user edit page
+/**METHOD 1 TO SHOWEDIT FORM*/
+/**method to get parameter, query database for existing user data and redirect to user edit page*/
 	private void showEditForm(HttpServletRequest request, HttpServletResponse response)
 	throws SQLException, ServletException, IOException {
-//get parameter passed in the URL
+/**get parameter passed in the URL*/
 	String empID = request.getParameter("empID");
 	userlist existingUser = new userlist("", "", "", "", "", "", "", "", "", "", "", ""); 
-// Step 1: Establishing a Connection
+/** Step 1: Establishing a Connection*/
 	try (Connection connection = getConnection(); 
-// Step 2:Create a statement using connection object
+/** Step 2:Create a statement using connection object*/
 	PreparedStatement preparedStatement = connection.prepareStatement(SELECT_USER_BY_ID);) {
 	preparedStatement.setString(1, empID); 
-// Step 3: Execute the query or update query
+/** Step 3: Execute the query or update query*/
 	ResultSet rs = preparedStatement.executeQuery(); 
-// Step 4: Process the ResultSet object
+/** Step 4: Process the ResultSet object*/
 		while (rs.next()) {
 			empID = rs.getString("empID");
 			String firstname = rs.getString("firstName");
@@ -167,15 +164,15 @@ public class userservlets extends HttpServlet {
 	} catch (SQLException e) {
 	System.out.println(e.getMessage());
 	} 
-//Step 5: Set existingUser to request and serve up the userEdit form
+/**Step 5: Set existingUser to request and serve up the userEdit form*/
 	request.setAttribute("userlist", existingUser);
 	request.getRequestDispatcher("/useredits.jsp").forward(request, response);
 	}
 	
-//METHOD 2 TO EDIT USER BASED ON DATA ON FORM
+/**METHOD 2 TO EDIT USER BASED ON DATA ON FORM*/
 	private void updateUser(HttpServletRequest request, HttpServletResponse response)
 	throws SQLException, IOException {
-//Step 1: Retrieve value from the request
+/**Step 1: Retrieve value from the request*/
 		String oriempID = request.getParameter("empID");
 		String empID = request.getParameter("empID");
 		String firstName = request.getParameter("FirstName");
@@ -189,7 +186,7 @@ public class userservlets extends HttpServlet {
 		String AnnualLeave = request.getParameter("AnnualLeave");
 		String StatLeave = request.getParameter("StatLeave");
 		String SickLeave = request.getParameter("SickLeave");
-//Step 2A: Attempt connection with database and execute update user SQL query
+/**Step 2A: Attempt connection with database and execute update user SQL query*/
 	try (Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(UPDATE_USERS_SQL);) {
 		statement.setString(1, empID);
 		statement.setString(2, firstName);
@@ -207,16 +204,16 @@ public class userservlets extends HttpServlet {
 		int i = statement.executeUpdate();
 	} 
  	
-//Step 3: redirect back to UserServlet (note: remember to change the url to your project name)
+/**Step 3: redirect back to UserServlet (note: remember to change the url to your project name)*/
 		response.sendRedirect("http://localhost:8080/Project/userservlets/dashboard");
 	}
 	
-//METHOD 3 TO DELETE USER
+/**METHOD 3 TO DELETE USER*/
 		private void deleteUser(HttpServletRequest request, HttpServletResponse response)
 		throws SQLException, IOException { 
-//Step 1: Retrieve value from the request
+/**Step 1: Retrieve value from the request*/
 		String empID = request.getParameter("empID"); 
-		//Step 2A: Attempt connection with database and execute delete user SQL query
+/**Step 2A: Attempt connection with database and execute delete user SQL query*/
 		try (Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(DELETE_USERS_SQL);) {
 		statement.setString(1, empID);
 		int i = statement.executeUpdate();
@@ -224,11 +221,11 @@ public class userservlets extends HttpServlet {
 			writer.println("Deleted account " + empID);
 			writer.close();
 			} 
-//Step 3: redirect back to UserServlet dashboard (note: remember to change the url to your project name)
+/**Step 3: redirect back to UserServlet dashboard (note: remember to change the url to your project name)*/
 		response.sendRedirect("http://localhost:8080/Project/userservlets/dashboard");
 		}
 	
-//Method 4: addNewUser (trigger registerservlets) //method to trigger RegisterServlet
+/**Method 4: addNewUser (trigger registerservlets) //method to trigger RegisterServlet*/
 	private void addNewUser(HttpServletRequest request, HttpServletResponse response)
 	throws SQLException, IOException, ServletException {
 	RequestDispatcher rd = null;
