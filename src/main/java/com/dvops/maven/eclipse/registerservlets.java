@@ -22,8 +22,7 @@ public class registerservlets extends HttpServlet {
      * @see HttpServlet#HttpServlet()
      */
     public registerservlets() {
-        super();
-        // TODO Auto-generated constructor stub
+       /** super();*/
     }
 
 	/**
