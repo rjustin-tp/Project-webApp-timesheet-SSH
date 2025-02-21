@@ -17,12 +17,6 @@ pipeline{
 				bat "mvn test"
 			}
 		}
-		stage("build"){
-			steps{
-				echo "Start build"
-				bat "mvn install -DskipTests"
-			}
-		}
 		stage("sonar") {
             steps {
                 script {
