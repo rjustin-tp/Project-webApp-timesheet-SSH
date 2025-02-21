@@ -43,9 +43,9 @@ pipeline{
                     // Run SonarQube scan using the properties file
                     withSonarQubeEnv('sonarqube_server') {
                     	bat "mvn sonar:sonar"
-                  }
-                }
-            }
+		    }
+        	}
+        }
 		}
 	}
 	}
