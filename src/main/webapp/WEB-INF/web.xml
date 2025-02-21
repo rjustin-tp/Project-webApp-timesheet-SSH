@@ -3,19 +3,19 @@
 		xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
 		xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" 
 		version="3.1">
-  <display-name>Project-webApp-timesheet-SSH</display-name>
-  <welcome-file-list>
-   <!-- <welcome-file>index.html</welcome-file>
+  <display-name>Project</display-name>
+  <!-- <welcome-file-list>
+   <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>  --> 
-    <welcome-file>launch.jsp</welcome-file>
-  </welcome-file-list>
+    <welcome-file>default.jsp</welcome-file>  
+    <welcome-file>launch.jsp</welcome-file> 
+  </welcome-file-list> --> 
   	<servlet>
 	<servlet-name>userservlets</servlet-name>
-	<servlet-class>userservlets</servlet-class>
+	<servlet-class>com.dvops.maven.eclipse.userservlets</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>userservlets</servlet-name>
@@ -24,7 +24,5 @@
 		<url-pattern>/userservlets/update</url-pattern>
 		<url-pattern>/userservlets/delete</url-pattern>
 		<url-pattern>/userservlets/insert</url-pattern>
-</servlet-mapping>
-  	
-  
+	</servlet-mapping>
 </web-app>
