@@ -35,7 +35,8 @@ pipeline{
                         sonar.jacoco.reportPath=target/jacoco.exec
 
                         sonar.java.binaries=target/classes
-                        sonar.java.coveragePlugin=jacoco """
+                        sonar.java.coveragePlugin=jacoco 
+			"""
                                             // Create sonar-project.properties file
                     writeFile file: 'sonar-project.properties', text: sonarProperties
 
