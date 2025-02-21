@@ -31,6 +31,7 @@
 		<!--  SonarQube properties -->
 		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
 		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+		<sonar.version>25.1.0.102122</sonar.version>
 		<sonar.language>java</sonar.language>
 
 		
